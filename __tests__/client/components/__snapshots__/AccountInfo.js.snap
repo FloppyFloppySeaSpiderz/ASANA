@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccountInfo React unit tests AccountInfo Should match snapshot 1`] = `
+<div
+  className="accInfo"
+>
+  <h3>
+    Account Information
+  </h3>
+  <p>
+    <strong>
+      Name: 
+    </strong>
+    Plaid Gold Standard 0% Interest Checking
+  </p>
+  <p>
+    <strong>
+      Type: 
+    </strong>
+    checking
+  </p>
+  <p>
+    <strong>
+      Balance: 
+    </strong>
+    $
+    100
+  </p>
+</div>
+`;
