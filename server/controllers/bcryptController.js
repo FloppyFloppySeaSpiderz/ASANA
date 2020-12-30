@@ -1,9 +1,9 @@
-const { Client } = require('pg');
-const database = new Client({
-  connectionString: process.env.POSTGRES_API,
-});
-database.connect();
-
+// const { Client } = require('pg');
+// const database = new Client({
+//   connectionString: process.env.POSTGRES_API,
+// });
+// database.connect();
+const database = require('../models/dbModels');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
