@@ -18,6 +18,7 @@ let ACCESS_TOKEN = '';
 plaidController.getLinkToken = (request, response, next) => {
   // plaid post request - will create the route / controllers later.
   let linkToken;
+
   client
     .createLinkToken({
       user: {
@@ -66,7 +67,7 @@ plaidController.getTransactions = (request, response, next) => {
     .getTransactions(ACCESS_TOKEN, '2020-10-01', '2020-12-25')
     .then((data) => {
       //add transactions to the database
-      console.log(data.accounts);
+      console.log('data account', data.accounts);
       const transactions = data.transactions; //array of transactions delivered from the database.
       const simpTransactions = [];
       const simpAccounts = [];
@@ -97,7 +98,7 @@ plaidController.getTransactions = (request, response, next) => {
 
         simpTransactions.push(simpTrx);
       });
-      console.log(simpAccounts);
+      console.log('simpAccount', simpAccounts);
       request.body = [simpTransactions, simpAccounts];
       return next();
     })

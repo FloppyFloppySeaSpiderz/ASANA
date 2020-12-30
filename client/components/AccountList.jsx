@@ -5,9 +5,6 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 
-
-
-
 // const AccountList = () => {
 //   return (
 //     <div className = "accountList">
@@ -26,32 +23,31 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function ListItemLink(props) {
-  return <ListItem button component="a" {...props} />;
+  return <ListItem button component='a' {...props} />;
 }
 
 export default function SimpleList(props) {
   const classes = useStyles();
 
-  console.log(props)
+  console.log(props);
 
   return (
-    
     <div className={classes.root}>
-      <List component="nav">
+      <List component='nav'>
         <ListItem button>
-          <ListItemText primary="Plaid Gold Standard Checking" />
+          <ListItemText primary='Plaid Gold Standard Checking' />
         </ListItem>
-      <Divider />
+        <Divider />
         <ListItem button>
-          <ListItemText primary="Plaid Diamond Credit Card" />
+          <ListItemText primary='Plaid Diamond Credit Card' />
         </ListItem>
-      <Divider />
+        <Divider />
         <ListItem button>
-          <ListItemText primary="Plaid Bronze Standard CD" />
+          <ListItemText primary='Plaid Bronze Standard CD' />
         </ListItem>
-      <Divider />  
+        <Divider />
         <ListItemLink>
-          <ListItemText primary="Plaid Diamond Credit Card" />
+          <ListItemText primary='Plaid Diamond Credit Card' />
         </ListItemLink>
       </List>
     </div>

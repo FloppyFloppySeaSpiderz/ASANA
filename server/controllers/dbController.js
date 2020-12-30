@@ -20,7 +20,7 @@ dbController.getBankTransactions = (request, response, next) => {
 };
 
 dbController.getBankAccounts = (request, response, next) => {
-  const queryText = 'SELECT * FROM account_information;';
+  const queryText = 'SELECT * FROM user_accounts;';
   database.query(queryText, (err, res) => {
     if (err) {
       return next(err);
@@ -50,7 +50,7 @@ dbController.addBankInfo = (request, response, next) => {
 dbController.addBankTransactions = (request, response, next) => {
   const queryValues = request.body[0];
   let queryText =
-    'INSERT INTO user_transactions (account_id, transaction_id, merchant_name, amount, account_type, date_of_transaction, category) VALUES';
+    'INSERT INTO user_transactions (account_id, transaction_id, merchant_name, amount, account_subtype, date_of_transaction, category) VALUES';
   // this regular expression replace iterative loop replaces all single apostrophe's "'" with two apostrophe's "''" so SQL can read the requests. In our dummy data this only applies to "McDonald's"
   let reg = /'/;
   for (let i = 0; i < queryValues.length; i++) {
@@ -79,7 +79,7 @@ dbController.addAccounts = (request, response, next) => {
   const queryValues = request.body[1];
   console.log(queryValues);
   let queryText =
-    'INSERT INTO account_information (account_id, account_subtype, account_name, account_balance) VALUES';
+    'INSERT INTO user_accounts (account_id, account_subtype, account_name, account_balance) VALUES';
 
   queryValues.forEach((account) => {
     queryText += `('${account.account_id}', '${account.account_subtype}', '${account.account_name}', '${account.account_balance}'),`;
