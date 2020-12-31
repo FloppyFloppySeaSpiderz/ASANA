@@ -6,15 +6,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import { AppContext } from "../components/ContextProvider";
 
-// const AccountList = () => {
-//   return (
-//     <div className = "accountList">
-//       <h3>Current accounts</h3>
-//         <Account />
-//     </div>
-//   )
-// };
-
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
@@ -29,8 +20,6 @@ function ListItemLink(props) {
 
 export default function SimpleList(props) {
   const classes = useStyles();
-
-  console.log(props);
 
   const { setAccountIndex } = useContext(AppContext);
 

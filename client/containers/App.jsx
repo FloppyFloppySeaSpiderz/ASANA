@@ -5,20 +5,6 @@ import SignIn from "./SignIn.jsx";
 import SignUp from './SignUp.jsx';
 import { AppContext } from "../components/ContextProvider";
 
-///Landing
-//NavBar
-//add account btn
-//account list
-//account
-
-//Account Info Container
-//Info - not a component
-
-//DisplayData
-
-//Transaction Container
-//Transaction
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -49,14 +35,5 @@ class App extends Component {
     );
   }
 }
-
-// const App = () => (
-//   <Router>
-//     <Switch>
-//       <Route path="/" exact component = {SignIn} />
-//       <Route path="/landing" component = {Landing} />
-//     </Switch>
-//   </Router>
-//   )
 
 export default App;

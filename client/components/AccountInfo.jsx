@@ -4,7 +4,6 @@ import { AppContext } from "../components/ContextProvider";
 function AccountInfo (props) {
 
   const { accountIndex } = useContext(AppContext);
-  // console.log(props.accounts[0].account_name);
 
   return (
     <div className = "accInfo">

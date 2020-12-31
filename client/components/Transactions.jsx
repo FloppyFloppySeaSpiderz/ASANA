@@ -15,15 +15,6 @@ const columns = [
 ];
 
 
-
-// const Transactions = ({transactions}) => (
-//   <ScrollToBottom className="transactions">
-//     <h3>Transactions</h3>
-//     {/* {transactions.map((transaction, i) => <div key={i}><Transaction name={transaction.name} category={transaction.category} date={transaction.date} amount={transactions.amount}/></div>)} */}
-//   </ScrollToBottom>
-// )
-
-
 export default function Transactions() {
 
   const [transactions, setTransactions] = useState([]);
