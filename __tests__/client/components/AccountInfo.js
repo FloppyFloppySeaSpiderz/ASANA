@@ -38,3 +38,4 @@ describe('AccountInfo React unit tests', () => {
     });
   });
 });
+  

@@ -2,6 +2,7 @@ import React, { Component, useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Landing from "./Landing.jsx";
 import SignIn from "./SignIn.jsx";
+import SignUp from './SignUp.jsx';
 import { AppContext } from "../components/ContextProvider";
 
 ///Landing
@@ -41,6 +42,7 @@ class App extends Component {
           <Switch>
             <Route path="/" exact component={SignIn} />
             <Route path="/landing" component={Landing} />
+            <Route path="/signup" exact component = {SignUp} />
           </Switch>
         </Router>
       </AppContext.Provider>
