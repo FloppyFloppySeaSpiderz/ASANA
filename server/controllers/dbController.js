@@ -74,7 +74,7 @@ dbController.addBankTransactions = (request, response, next) => {
     }
   });
 };
-
+// ACCOUNT_INFORMATION SHOULD BE user_accounts
 dbController.addAccounts = (request, response, next) => {
   const queryValues = request.body[1];
   console.log(queryValues);
