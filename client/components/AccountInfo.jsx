@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { AppContext } from "../components/ContextProvider";
 
 function AccountInfo (props) {
 
-  console.log(props.accounts[0])
-
-
-
+  const { accountIndex } = useContext(AppContext);
+  // console.log(props.accounts[0].account_name);
 
   return (
     <div className = "accInfo">
       <h3>Account Information</h3>
-      <p><strong>Name: </strong>{props.accounts[0].account_name}</p>
-      <p><strong>Type: </strong>{props.accounts[0].account_subtype}</p>
-      <p><strong>Balance: </strong>${props.accounts[0].acount_balance}</p>
+      <p><strong>Name: </strong>{props.accounts[accountIndex].account_name}</p>
+      <p><strong>Type: </strong>{props.accounts[accountIndex].account_subtype}</p>
+      <p><strong>Balance: </strong>${props.accounts[accountIndex].acount_balance}</p>
    </div>
   )
 }
